@@ -15,6 +15,16 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer("name=DefaultConnection");
 });
 
+builder.Services.AddCors(options => 
+{
+    options.AddDefaultPolicy(
+        Policy =>
+        {
+            Policy.AllowAnyOrigin();
+        }
+    );
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -29,5 +39,6 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+app.UseCors();
 
 app.Run();
