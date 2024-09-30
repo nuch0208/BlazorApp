@@ -1,11 +1,5 @@
 @page "/Clients/Create"
 @using BlazorApp.Models
-@using System.Net.Http.Json
-@using System.Text.Json.Nodes
-@inject HttpClient http
-@inject NavigationManager navMangaer
-
-
 
 <div class="row">
     <div class="col-lg-8">
@@ -19,7 +13,7 @@
             </div>
         </div>
 
-        <div class="row mb-3">
+         <div class="row mb-3">
             <label class="col-md-4 col-form-label">Last Name</label>
             <div class="col-md-8">
                 <input class="form-control" @bind="ClientData.LastName">
@@ -27,7 +21,7 @@
             </div>
         </div>
 
-        <div class="row mb-3">
+         <div class="row mb-3">
             <label class="col-md-4 col-form-label">Email</label>
             <div class="col-md-8">
                 <input class="form-control" @bind="ClientData.Email">
@@ -43,7 +37,7 @@
             </div>
         </div>
 
-        <div class="row mb-3">
+         <div class="row mb-3">
             <label class="col-md-4 col-form-label">Address</label>
             <div class="col-md-8">
                 <input class="form-control" @bind="ClientData.Address">
@@ -51,7 +45,7 @@
             </div>
         </div>
 
-        <div class="row mb-3">
+         <div class="row mb-3">
             <label class="col-md-4 col-form-label">Status</label>
             <div class="col-md-8">
                 <select class="form-select" @bind="ClientData.Status">
@@ -61,7 +55,7 @@
                     <option value='Occasional'>Occasional</option>
                     <option value='Inactive'>Inactive</option>
                 </select>
-                <span class="text-danger">@Errors["Statis"]?[0]</span>
+                <span class="text-danger">@Errors["Status"]?[0]</span>
             </div>
         </div>
 
@@ -76,35 +70,38 @@
     </div>
 </div>
 
+
+
+@inject HttpClient http
+@inject NavigationManager navManager
+@using System.Text.Json.Nodes
+
 @code {
-    public ClientDto ClientData { set; get; } = new();
-    public JsonNode Errors { set; get;} = new JsonObject();
+    public ClientDto ClientData {get; set;} = new();
+    public JsonNode Errors { set; get; } = new JsonObject();
 
     protected async Task SaveClient()
     {
-        var response = await http.PostAsJsonAsync("https://localhost:5056/api/Clients", ClientData);
+        var response = await http.PostAsJsonAsync("http://localhost:5056/api/Clients", ClientData);
 
-        if(response.IsSuccessStatusCode)
+        if (response.IsSuccessStatusCode)
         {
-            //redirec to list of clients
-            navMangaer.NavigateTo("/Clients");
+            navManager.NavigateTo("/Clients");
         }
         else
         {
             var strResponse = await response.Content.ReadAsStringAsync();
-            Console.WriteLine("Json Response: \n " + strResponse);
+            Console.WriteLine("Json Response: \n" + strResponse);
 
             try
             {
                 var jsonResponse = JsonNode.Parse(strResponse);
-                Errors = jsonResponse?["error"] ?? new JsonObject();
+                Errors = jsonResponse?["errors"] ?? new JsonObject();
             }
             catch (Exception ex)
             {
-                
+                Console.WriteLine("Exception : " + ex.Message);
             }
         }
     }
-
 }
-

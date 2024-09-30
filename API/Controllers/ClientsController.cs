@@ -39,7 +39,7 @@ namespace API.Controllers
         {
             //submited data is valid
             var otherClient = context.Clients.FirstOrDefault(c => c.Email == clientDto.Email);
-            if(otherClient != null) //is same email address
+            if(otherClient != null) //email address is alreday exsit
             {
                 ModelState.AddModelError("Email" , "The Email Address is already used");
                 var validation = new ValidationProblemDetails(ModelState); //then add to validate and return
@@ -76,7 +76,7 @@ namespace API.Controllers
                 var validation = new ValidationProblemDetails(ModelState);
                 return BadRequest(validation);
             }
-
+            
             var client = context.Clients.Find(id);
             if(client == null)
             {

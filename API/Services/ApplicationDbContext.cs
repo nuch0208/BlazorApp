@@ -7,7 +7,7 @@ namespace API.Services
     {
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
-
+                    
         }
 
         public DbSet<Client> Clients {get; set;} 

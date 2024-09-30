@@ -1,43 +1,43 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\BlazorApp\\BlazorApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "D:\\WebApp\\blazorapp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\BlazorApp\\BlazorApp\\obj\\Debug\\net8.0\\compressed\\ohsprzh3vr.gz",
+      "Id": "D:\\WebApp\\blazorapp\\obj\\Debug\\net8.0\\compressed\\hks5gv25bb.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\BlazorApp\\BlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorApp.styles.css",
+      "Id": "D:\\WebApp\\blazorapp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorApp.styles.css",
       "PackagePath": "staticwebassets\\BlazorApp.styles.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\BlazorApp\\BlazorApp\\wwwroot\\css\\app.css",
+      "Id": "D:\\WebApp\\blazorapp\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\BlazorApp\\BlazorApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "D:\\WebApp\\blazorapp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\BlazorApp\\BlazorApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "D:\\WebApp\\blazorapp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\BlazorApp\\BlazorApp\\wwwroot\\favicon.png",
+      "Id": "D:\\WebApp\\blazorapp\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\BlazorApp\\BlazorApp\\wwwroot\\icon-192.png",
+      "Id": "D:\\WebApp\\blazorapp\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\BlazorApp\\BlazorApp\\wwwroot\\index.html",
+      "Id": "D:\\WebApp\\blazorapp\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\BlazorApp\\BlazorApp\\wwwroot\\sample-data\\weather.json",
+      "Id": "D:\\WebApp\\blazorapp\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {
